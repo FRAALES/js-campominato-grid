@@ -1,10 +1,15 @@
+
 const gridElement = document.getElementById('test');
 console.log(gridElement);
+
+const arrayNum = writeNumber(1, 64);
+console.log(arrayNum);
 
 
 
 //L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
-//Ci saranno quindi 10 caselle per ognuna delle 10 righe.
+
+
 document.getElementById("test").style.display ="none";
 
 function openTest() {
@@ -13,12 +18,18 @@ function openTest() {
 
 document.getElementById('btn').addEventListener('click', openTest);
 
-
+//Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 //Ogni cella ha un numero progressivo, da 1 a 100.
 for (let i = 0; i < 100; i++){
 
+    const newSquare = createGridSquare("div", "square");
 
-    const newSquare = createGridSquare();
+    newSquare.addEventListener("click",
+        function(){
+            newSquare.classList.add("clicked-true");
+            console.log(newSquare);
+        }
+    ); 
 
     gridElement.append(newSquare);
 
@@ -43,8 +54,25 @@ for (let i = 0; i < 100; i++){
 
 //Funzioni
 
-function createGridSquare(){
-    const newElement = document.createElement("div");
-    newElement.classList.add("square");
+
+
+function createGridSquare(tagType, classToAdd){
+    const newElement = document.createElement(tagType);
+    newElement.classList.add(classToAdd);
     return newElement;
+};
+
+
+
+
+function writeNumber (min, max){
+    const intArr = [];
+
+    for (let i = 1; i < max; i++){
+        const nuovoNum = i;
+    }
+
+    return nuovoNum; 
+    
+
 }

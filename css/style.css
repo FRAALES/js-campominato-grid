@@ -43,10 +43,16 @@ header {
     display: none;
 }
 
-.square span.green{
-    color: green;
+.square span.blue{
+    color: blue;
 }
 
-.square span.red{
-    color: red;
+
+footer {
+    height: 100px;
+    background-color: white;
+}
+
+.footer-contenitore{
+    padding: 30px;
 }
