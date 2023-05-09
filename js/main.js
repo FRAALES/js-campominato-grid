@@ -2,7 +2,7 @@
 const gridElement = document.getElementById('test');
 console.log(gridElement);
 
-const arrayNum = writeNumber(1, 64);
+const arrayNum = writeNumber(1, 100);
 console.log(arrayNum);
 
 
@@ -53,9 +53,6 @@ for (let i = 0; i < 100; i++){
 
 
 //Funzioni
-
-
-
 function createGridSquare(tagType, classToAdd){
     const newElement = document.createElement(tagType);
     newElement.classList.add(classToAdd);
@@ -64,15 +61,15 @@ function createGridSquare(tagType, classToAdd){
 
 
 
-
+//Funzione che crea i numeri da 1 a 100 in ordine crescente
 function writeNumber (min, max){
-    const intArr = [];
+    const numeriArr = [];
 
-    for (let i = 1; i < max; i++){
-        const nuovoNum = i;
+    for (let i = 1; i < numeriArr.length; i++){
+        console.log(numeriArr[i]);
     }
 
-    return nuovoNum; 
+    return numeriArr; 
     
 
 }
