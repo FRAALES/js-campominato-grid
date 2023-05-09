@@ -65,11 +65,10 @@ function createGridSquare(tagType, classToAdd){
 function writeNumber (min, max){
     const numeriArr = [];
 
-    for (let i = 1; i < numeriArr.length; i++){
-        console.log(numeriArr[i]);
+    for (let i = 1; i <= 100; i++){
+        console.log([i]);
     }
 
     return numeriArr; 
-    
 
 }
