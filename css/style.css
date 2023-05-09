@@ -3,3 +3,49 @@
     margin: 0;
     padding: 0;
 }
+
+
+html, body {
+    background-color: #7fffd4;
+}
+
+
+header {
+    height: 100px;
+    background-color: white;
+    color: black;
+}
+
+.header-contenitore{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+
+.container{
+    width: 500px;
+    margin: 60px;
+    border: 2px solid black;
+}
+
+
+.square{
+    float: left;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.square span{
+    display: none;
+}
+
+.square span.green{
+    color: green;
+}
+
+.square span.red{
+    color: red;
+}
