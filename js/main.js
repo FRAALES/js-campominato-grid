@@ -2,20 +2,46 @@
 const gridElement = document.getElementById('test');
 console.log(gridElement);
 
+//L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
+//Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 
-for (let i = 0; i < 100; i++){
+document.getElementById("test").style.display ="none";
+
+function openTest() {
+       document.getElementById("test").style.display = "block";
+ }
+
+ document.getElementById('btn').addEventListener('click', openTest);
+
+
+
+//Cicliamo i numeri da 1 a 100
+for (let i = 1; i <= 100; i++){
 
     const newSquare = createGridSquare("div", "square");
 
-    // newSquare.addEventListener("click",
-    //     function(){
-    //         newSquare.classList.add("clicked-true");
-    //         console.log(newSquare);
-    //     }
-    // ); 
-
     gridElement.append(newSquare);
+
+    //stampiamo i numeri da 1 a 100 in console
+    console.log([i]);
+
+    //Ogni cella ha un numero progressivo, da 1 a 100.
+    let numeroNellaCella = i;
+    newSquare.innerHTML = numeroNellaCella;
+
+    //Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata
+    const addColorandNumber = document.getElementsByClassName('square');
+    
+    document.getElementsByClassName("square").addEventListener("click", 
+    function() {
+        newSquare.classList.add('clicked-true');
+      });
+    
 }
+
+
+
+
 
 
 //Funzioni
@@ -39,30 +65,6 @@ function createGridSquare(tagType, classToAdd){
 
 
 
-// const arrayNum = writeNumber(1, 100);
-// console.log(arrayNum);
-
-
-
-//L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
-
-
-// document.getElementById("test").style.display ="none";
-
-// function openTest() {
-//     document.getElementById("test").style.display = "block";
-// }
-
-// document.getElementById('btn').addEventListener('click', openTest);
-
-
-
-//Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-//Ogni cella ha un numero progressivo, da 1 a 100.
-
-
-
-//Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
 
 
@@ -75,19 +77,3 @@ function createGridSquare(tagType, classToAdd){
 
 
 
-
-
-
-
-
-// //Funzione che crea i numeri da 1 a 100 in ordine crescente e li stampa in console
-// function writeNumber (min, max){
-//     const numeriArr = [];
-
-//     for (let i = 1; i <= 100; i++){
-//         console.log([i]);
-//     }
-
-//     return numeriArr; 
-
-// }
